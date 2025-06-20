@@ -104,7 +104,7 @@
             animation: profileFadeIn 1.5s ease-out;
             background-image: url('./profile.jpg');
             background-size: cover;
-            background-position: center 30%;
+            background-position: 40% 20%;
         }
 
         .profile-photo::before {
@@ -639,10 +639,10 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             .cv-container {
                 grid-template-columns: 1fr;
-                margin: 10px;
+                margin: 10px auto;
             }
             
             .header {
@@ -650,11 +650,52 @@
             }
             
             .name {
-                font-size: 2rem;
+                font-size: 2.2rem;
+            }
+            
+            .title {
+                font-size: 1.1rem;
+                padding: 6px 16px;
             }
             
             .main-content, .sidebar {
-                padding: 20px;
+                padding: 25px;
+            }
+            
+            .sidebar {
+                border-right: none;
+                border-bottom: 1px solid #d1d9e6;
+            }
+            
+            .sidebar-section {
+                margin-bottom: 25px;
+            }
+            
+            .contact-item {
+                margin-bottom: 12px;
+            }
+            
+            .skill-item {
+                margin-bottom: 12px;
+            }
+            
+            .language-item {
+                margin-bottom: 10px;
+            }
+            
+            .reference-item {
+                padding: 15px;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+                margin-bottom: 25px;
+            }
+            
+            .section-title i {
+                width: 36px;
+                height: 36px;
+                font-size: 16px;
             }
             
             .timeline::before {
@@ -664,6 +705,177 @@
             .timeline-item::before {
                 left: -25px;
             }
+            
+            .timeline-item {
+                padding: 20px;
+            }
+            
+            .job-title, .degree-title {
+                font-size: 1.1rem;
+            }
+            
+            .company, .university {
+                font-size: 0.9rem;
+            }
+            
+            .date {
+                padding: 5px 12px;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                padding: 25px 15px;
+            }
+            
+            .profile-photo {
+                width: 140px;
+                height: 140px;
+                font-size: 40px;
+            }
+            
+            .name {
+                font-size: 2rem;
+            }
+            
+            .title {
+                font-size: 1rem;
+            }
+            
+            .main-content, .sidebar {
+                padding: 20px;
+            }
+            
+            .sidebar-title {
+                font-size: 1rem;
+                margin-bottom: 15px;
+            }
+            
+            .section-title {
+                font-size: 1.2rem;
+                margin-bottom: 20px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .section-title i {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+            
+            .section-title::after {
+                content: none;
+            }
+            
+            .timeline-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .date {
+                margin-top: 10px;
+                align-self: flex-start;
+            }
+            
+            .description {
+                font-size: 0.9rem;
+            }
+            
+            .description li {
+                padding-left: 20px;
+            }
+            
+            .description li::before {
+                width: 8px;
+                height: 8px;
+                top: 7px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
+            .cv-container {
+                margin: 5px auto;
+                border-radius: 10px;
+            }
+            
+            .header {
+                padding: 20px 10px;
+            }
+            
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+                font-size: 36px;
+            }
+            
+            .name {
+                font-size: 1.8rem;
+            }
+            
+            .title {
+                font-size: 0.9rem;
+                padding: 5px 14px;
+            }
+            
+            .main-content, .sidebar {
+                padding: 15px;
+            }
+            
+            .sidebar-title {
+                font-size: 0.95rem;
+            }
+            
+            .section-title {
+                font-size: 1.15rem;
+            }
+            
+            .section-title i {
+                width: 34px;
+                height: 34px;
+                font-size: 15px;
+            }
+            
+            .timeline {
+                padding-left: 25px;
+            }
+            
+            .timeline::before {
+                left: 10px;
+            }
+            
+            .timeline-item::before {
+                left: -23px;
+            }
+            
+            .job-title, .degree-title {
+                font-size: 1rem;
+            }
+            
+            .company, .university {
+                font-size: 0.85rem;
+            }
+            
+            .date {
+                font-size: 0.75rem;
+            }
+            
+            .description {
+                font-size: 0.85rem;
+            }
+            
+            .description ul {
+                margin-left: 15px;
+            }
+            
+            .description li {
+                padding-left: 18px;
+                font-size: 0.85rem;
+            }
         }
 
         /* Print Styles */
@@ -671,11 +883,16 @@
             .cv-container {
                 box-shadow: none;
                 margin: 0;
+                max-width: 100%;
             }
             
             body {
                 background: white;
                 padding: 0;
+            }
+            
+            .cv-container::before {
+                height: 4px;
             }
         }
     </style>
